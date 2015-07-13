@@ -7,4 +7,5 @@
 ##二、CentOS
 ###1、yum源Setting
 ###2、rsync文件同步
+###3、redis install
 
