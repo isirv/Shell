@@ -1,14 +1,14 @@
 #!/bin/bash
 
 #install gcc
-yum install cpp
-yum install binutils
-yum install glibc
-yum install glibc-kernheaders
-yum install glibc-common
-yum install glibc-devel
-yum install gcc
-yum install make
+yum -y install cpp
+yum -y install binutils
+yum -y install glibc
+yum -y install glibc-kernheaders
+yum -y install glibc-common
+yum -y install glibc-devel
+yum -y install gcc
+yum -y install make
 
 #install tcl
 tar -zxvf tar/tcl8.6.1-src.tar.gz  -C /usr/local/  
@@ -46,6 +46,7 @@ chmod -v 755 /usr/lib/libtcl8.6.so
 
 
 #install redis
+cd -
 tar -zxvf tar/redis-3.0.2.tar.gz -C /usr/local/
 cd /usr/local/
 mv redis-3.0.2 redis && cd redis
