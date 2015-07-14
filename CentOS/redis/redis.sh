@@ -60,7 +60,11 @@ mv mkreleasehdr.sh redis-benchmark redis-check-aof redis-check-dump redis-cli re
 # 修改配置文件路径
 cd ..
 mv redis.conf /usr/local/redis/etc/
+cp /usr/local/redis/etc/redis.conf /usr/local/redis/etc/redis.conf.bak
+# 修改redis为后台运行
+filepath=/usr/local/redis/etc/redis.conf
 
+sed -i 's/daemonize no/daemonize yes/g'  "$filepath"
 
 
 echo "启动redis server命令: cd /usr/local/redis/bin/ & ./redis-server /usr/local/redis/etc/redis.conf"
